@@ -30,7 +30,7 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.showmode = false
-vim.o.cmdheight = 2
+vim.o.cmdheight = 1
 
 -- 自动加载
 vim.o.autoread = true

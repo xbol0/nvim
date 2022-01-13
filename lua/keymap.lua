@@ -11,7 +11,7 @@ map('n', '<leader>t', ':NvimTreeToggle<CR>', opt)
 -- ctrl+p找文件
 map('n', '<c-p>', ':Telescope find_files<CR>', opt)
 -- 全局搜索
-map('n', '<leader>ff', ':Telescope grep_string<CR>', opt)
+map('n', '<leader>ff', ':Telescope live_grep<CR>', opt)
 
 -- 切换标签栏
 map('n', '<c-h>', '<esc>:BufferLineCyclePrev<CR>', opt)
@@ -19,6 +19,7 @@ map('n', '<c-l>', '<esc>:BufferLineCycleNext<CR>', opt)
 -- 删除标签栏
 map('n', 'W<right>', '<esc>:BufferLineCloseRight<CR>', opt)
 map('n', 'W<left>', '<esc>:BufferLineCloseLeft<CR>', opt)
+map('n', '<leader>w', ':bd<CR>', opt)
 
 -- 保存
 map('n', '<c-s>', ':w<CR>', opt)
