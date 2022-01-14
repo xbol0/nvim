@@ -39,6 +39,8 @@ require "paq" {
   "nvim-lualine/lualine.nvim",
   "lewis6991/gitsigns.nvim",
   "folke/which-key.nvim",
+  "folke/trouble.nvim",
+  "TimUntersberger/neogit",
 
   -- cmp
   "hrsh7th/nvim-cmp",

@@ -6,26 +6,26 @@ local opt = { noremap = true, silent = true }
 ---------------------------------------------------
 
 -- 切换文件树
-map('n', '<leader>t', ':NvimTreeToggle<CR>', opt)
+map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', opt)
 
 -- ctrl+p找文件
-map('n', '<c-p>', ':Telescope find_files<CR>', opt)
+map('n', '<c-p>', '<cmd>Telescope find_files<CR>', opt)
 -- 全局搜索
-map('n', '<leader>ff', ':Telescope live_grep<CR>', opt)
+map('n', '<leader>ff', '<cmd>Telescope live_grep<CR>', opt)
 
 -- 切换标签栏
 map('n', '<c-h>', '<cmd>BufferLineCyclePrev<CR>', opt)
 map('n', '<c-l>', '<cmd>BufferLineCycleNext<CR>', opt)
 -- 删除标签栏
-map('n', 'W<right>', '<esc>:BufferLineCloseRight<CR>', opt)
-map('n', 'W<left>', '<esc>:BufferLineCloseLeft<CR>', opt)
-map('n', '<leader>w', ':bd<CR>', opt)
+map('n', 'W<right>', '<cmd>BufferLineCloseRight<CR>', opt)
+map('n', 'W<left>', '<cmd>BufferLineCloseLeft<CR>', opt)
+map('n', '<leader>w', '<cmd>bd<CR>', opt)
 
 -- 保存
-map('n', '<c-s>', ':w<CR>', opt)
+map('n', '<c-s>', '<cmd>w<CR>', opt)
 
 -- 强制退出
-map('n', '<leader>q', ':q!<CR>', opt)
+map('n', '<leader>q', '<cmd>q!<CR>', opt)
 
 -- 打开终端
 map('n', '<c-k><c-j>', '<cmd>lua require"FTerm".toggle()<CR>', opt)
@@ -42,8 +42,13 @@ map('v', '<leader>?', 'gbc<esc>', { noremap = false })
 -- 格式化
 map('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opt)
 
+-- 切换问题面板
+map('n', '<leader>y', '<cmd>TroubleToggle<CR>', opt)
+
 -- git
+map('n', '<c-g><c-g>', '<cmd>Neogit<CR>', opt)
+
 -- 切换行内git注释
-map('n', '<c-g><c-b>', ':Gitsigns toggle_current_line_blame<cr>', opt)
+map('n', '<c-g><c-b>', '<cmd>Gitsigns toggle_current_line_blame<cr>', opt)
 -- 暂存当前文件
 map('n', '<c-g><c-s>', '<cmd>Gitsigns stage_buffer<cr>', opt)

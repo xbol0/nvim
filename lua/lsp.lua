@@ -18,7 +18,6 @@ function maplsp(map)
   map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', mapOpts)
   map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', mapOpts)
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', mapOpts)
-  map('n', '<c-s>', '<cmd>lua vim.lsp.buf.formatting_sync(nil, 1000)<cr><cmd>w<cr>', mapOpts)
 end
 
 require "lspconfig".denols.setup {
@@ -26,6 +25,14 @@ require "lspconfig".denols.setup {
   on_attach = function(c, bufnr)
     local function mapfn(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     maplsp(mapfn)
+    if c.resolved_capabilities.document_formatting then
+      vim.cmd([[
+      augroup LspFormatting
+          autocmd! * <buffer>
+          autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)
+      augroup END
+      ]])
+    end
   end
 }
 

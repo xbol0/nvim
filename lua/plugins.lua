@@ -79,6 +79,12 @@ require "gitsigns".setup {}
 -- which-key
 require "which-key".setup {}
 
+-- trouble
+require "trouble".setup {}
+
+-- neogit
+require "neogit".setup {}
+
 -- nvim-cmp
 local cmp = require "cmp"
 cmp.setup {
