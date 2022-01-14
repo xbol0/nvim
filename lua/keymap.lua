@@ -14,8 +14,8 @@ map('n', '<c-p>', ':Telescope find_files<CR>', opt)
 map('n', '<leader>ff', ':Telescope live_grep<CR>', opt)
 
 -- 切换标签栏
-map('n', '<c-h>', '<esc>:BufferLineCyclePrev<CR>', opt)
-map('n', '<c-l>', '<esc>:BufferLineCycleNext<CR>', opt)
+map('n', '<c-h>', '<cmd>BufferLineCyclePrev<CR>', opt)
+map('n', '<c-l>', '<cmd>BufferLineCycleNext<CR>', opt)
 -- 删除标签栏
 map('n', 'W<right>', '<esc>:BufferLineCloseRight<CR>', opt)
 map('n', 'W<left>', '<esc>:BufferLineCloseLeft<CR>', opt)
@@ -45,4 +45,5 @@ map('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opt)
 -- git
 -- 切换行内git注释
 map('n', '<c-g><c-b>', ':Gitsigns toggle_current_line_blame<cr>', opt)
-
+-- 暂存当前文件
+map('n', '<c-g><c-s>', '<cmd>Gitsigns stage_buffer<cr>', opt)

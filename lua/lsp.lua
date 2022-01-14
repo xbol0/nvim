@@ -18,8 +18,7 @@ function maplsp(map)
   map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', mapOpts)
   map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', mapOpts)
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', mapOpts)
-  -- 保存时格式化
-  map('n', '<c-s>', '<cmd>lua vim.lsp.buf.formatting()<CR>:w<cr>', mapOpts)
+  map('n', '<c-s>', '<cmd>lua vim.lsp.buf.formatting_sync(nil, 1000)<cr><cmd>w<cr>', mapOpts)
 end
 
 require "lspconfig".denols.setup {

@@ -65,7 +65,13 @@ require "nvim-autopairs".setup {}
 require "Comment".setup {}
 
 -- lualine
-require "lualine".setup {}
+require "lualine".setup {
+  options = {
+    disabled_filetypes = {
+      "NvimTree"
+    }
+  }
+}
 
 -- gitsigns
 require "gitsigns".setup {}
@@ -88,12 +94,13 @@ cmp.setup {
     name = "buffer",
   }),
   mapping = {
-    ['c-k'] = cmp.mapping.select_prev_item(),
-    ['c-j'] = cmp.mapping.select_next_item(),
+    ['<c-k>'] = cmp.mapping.select_prev_item(),
+    ['<c-j>'] = cmp.mapping.select_next_item(),
     ['<cr>'] = cmp.mapping.confirm({
       select = true,
       behavior = cmp.ConfirmBehavior.Replace,
     }),
+    ['<c-l>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
   }
 }
 
