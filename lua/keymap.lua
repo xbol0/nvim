@@ -5,9 +5,15 @@ local opt = { noremap = true, silent = true }
 -- 快捷键设置
 ---------------------------------------------------
 
+-- 跳10行
+map('n', '<c-d>', '10j', opt)
+map('n', '<c-u>', '10k', opt)
+
 -- 切换文件树
 map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', opt)
 
+-- telescope主面板
+map('n', '<c-k><c-t>', '<cmd>Telescope<CR>', opt)
 -- ctrl+p找文件
 map('n', '<c-p>', '<cmd>Telescope find_files<CR>', opt)
 -- 全局搜索
