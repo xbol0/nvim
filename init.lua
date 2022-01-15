@@ -23,26 +23,42 @@ vim.cmd("colorscheme melange")
 ---------------------------------------------------
 
 require "paq" {
+  -- 管理插件的玩意
   "savq/paq-nvim",
+  -- 一些依赖
+  "nvim-lua/plenary.nvim",
   "kyazdani42/nvim-web-devicons",
+  -- 左边的树
   "kyazdani42/nvim-tree.lua",
+  -- 上面那一条东西
   "akinsho/nvim-bufferline.lua",
   "nvim-treesitter/nvim-treesitter",
+  -- 老色批配置
   "neovim/nvim-lspconfig",
+  -- 干活的宝贝
   "github/copilot.vim",
-  "nvim-lua/plenary.nvim",
+  -- 一个万能的弹窗
   "nvim-telescope/telescope.nvim",
+  -- 颜色主题
   "savq/melange",
+  -- 终端
   "numToStr/FTerm.nvim",
+  -- 自动补全括号
   "windwp/nvim-autopairs",
+  -- 注释
   "numToStr/Comment.nvim",
+  -- 下面那一条东西
   "nvim-lualine/lualine.nvim",
+  -- git辅助工具
   "lewis6991/gitsigns.nvim",
+  -- 快捷键提示工具
   "folke/which-key.nvim",
+  -- 问题面板
   "folke/trouble.nvim",
+  -- git操作面板
   "TimUntersberger/neogit",
 
-  -- cmp
+  -- 自动补全工具，下面那一坨都是
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-buffer",

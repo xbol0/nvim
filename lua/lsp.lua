@@ -14,9 +14,13 @@ local mapOpts = { noremap = true, silent = true }
 
 -- 通用键盘映射
 function maplsp(map)
+  -- leader + .  解决问题
   map('n', '<leader>.', '<cmd>lua vim.lsp.buf.code_action()<CR>', mapOpts)
+  -- 悬浮查看
   map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', mapOpts)
+  -- 跳转到定义
   map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', mapOpts)
+  -- 跳转到引用
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', mapOpts)
 end
 

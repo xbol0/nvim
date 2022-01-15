@@ -59,7 +59,7 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 补全增强
 vim.o.wildmenu = true
--- vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = vim.o.shortmess .. 'atI'
 vim.o.pumheight = 10
 vim.o.showtabline = 2
 
