@@ -24,19 +24,21 @@ function maplsp(map)
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', mapOpts)
 end
 
+local onAttach = function (c, bufnr)
+  local function mapfn(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  maplsp(mapfn)
+  if c.resolved_capabilities.document_formatting then
+    vim.cmd([[
+    augroup LspFormatting
+        autocmd! * <buffer>
+        autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)
+    augroup END
+    ]])
+  end
+end
+
 require "lspconfig".denols.setup {
   init_options = denoOptions,
-  on_attach = function(c, bufnr)
-    local function mapfn(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    maplsp(mapfn)
-    if c.resolved_capabilities.document_formatting then
-      vim.cmd([[
-      augroup LspFormatting
-          autocmd! * <buffer>
-          autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)
-      augroup END
-      ]])
-    end
-  end
+  on_attach = onAttach,
 }
 

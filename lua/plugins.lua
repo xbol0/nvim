@@ -7,7 +7,8 @@ require'nvim-tree'.setup {
   -- 关闭文件时自动关闭
    auto_close = true,
    view = {
-     hide_root_folder = true
+     hide_root_folder = true,
+     side = "right",
    }
 }
 
@@ -67,7 +68,8 @@ require "Comment".setup {}
 require "lualine".setup {
   options = {
     disabled_filetypes = {
-      "NvimTree"
+      "NvimTree",
+      "NeogitStatus",
     }
   }
 }
