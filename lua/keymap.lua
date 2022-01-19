@@ -35,6 +35,7 @@ map('n', '<leader>q', '<cmd>q!<CR>', opt)
 
 -- 打开终端
 map('n', '<c-k><c-j>', '<cmd>lua require"FTerm".toggle()<CR>', opt)
+map('t', '<c-k><c-j>', '<cmd>lua require"FTerm".toggle()<CR>', opt)
 
 -- 复制当前行
 map('n', '<leader><down>', 'yyp', { noremap = false })
