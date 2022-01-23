@@ -1,5 +1,6 @@
 -- LSP设置
 -- 配置加载映射文件
+local util = require 'lspconfig.util'
 local imfile = 'import_map.json'
 local denoOptions = {
   enable = true,
@@ -40,5 +41,13 @@ end
 require "lspconfig".denols.setup {
   init_options = denoOptions,
   on_attach = onAttach,
+  root_dir = util.root_pattern(
+    'deno.json',
+    'deno.jsonc',
+    'tsconfig.json',
+    '.git',
+    'deps.ts',
+    'mod.ts'
+  ),
 }
 
