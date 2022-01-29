@@ -15,9 +15,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   install_path)
 end
 
--- 设置主题
-vim.cmd("colorscheme melange")
-
 ---------------------------------------------------
 -- 插件管理
 ---------------------------------------------------
@@ -71,3 +68,5 @@ require "paq" {
 require "plugins"
 require "lsp"
 
+-- 设置主题
+vim.cmd("colorscheme melange")
