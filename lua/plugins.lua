@@ -53,7 +53,7 @@ require "telescope".setup {}
 
 -- fterm
 require "FTerm".setup {
-  cmd = { os.getenv("SHELL"), "-l" },
+  cmd = { "zsh", "-l" },
   border = "double"
 }
 
