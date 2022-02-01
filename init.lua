@@ -37,7 +37,7 @@ require "paq" {
   -- 一个万能的弹窗
   "nvim-telescope/telescope.nvim",
   -- 颜色主题
-  "savq/melange",
+  'projekt0n/github-nvim-theme',
   -- 终端
   "numToStr/FTerm.nvim",
   -- 自动补全括号
@@ -69,4 +69,4 @@ require "plugins"
 require "lsp"
 
 -- 设置主题
-vim.cmd("colorscheme melange")
+vim.cmd("colorscheme github_light")
