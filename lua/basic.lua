@@ -74,3 +74,7 @@ vim.diagnostic.config({
   severity_sort = false,
 })
 
+-- 设置缩进
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+
