@@ -78,3 +78,5 @@ vim.diagnostic.config({
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
+-- 不自动折叠
+vim.o.foldlevelstart = 99
