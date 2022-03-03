@@ -6,8 +6,8 @@ local opt = { noremap = true, silent = true }
 ---------------------------------------------------
 
 -- 跳10行
-map('n', '<c-d>', '10j', opt)
-map('n', '<c-u>', '10k', opt)
+map('n', '<c-d>', '5j', opt)
+map('n', '<c-u>', '5k', opt)
 
 -- 切换文件树
 map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', opt)
@@ -32,6 +32,7 @@ map('v', '<leader>y', '"+y', opt)
 
 -- 保存
 map('n', '<c-s>', '<cmd>w<CR>', opt)
+map('n', '<leader>s', '<cmd>w<CR>', opt)
 
 -- 强制退出
 map('n', '<leader>q', '<cmd>q!<CR>', opt)
