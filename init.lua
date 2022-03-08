@@ -54,6 +54,8 @@ require "paq" {
   "folke/trouble.nvim",
   -- git操作面板
   "TimUntersberger/neogit",
+  -- 复制
+  "ojroques/vim-oscyank",
 
   -- 自动补全工具，下面那一坨都是
   "hrsh7th/nvim-cmp",

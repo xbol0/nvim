@@ -28,7 +28,7 @@ map('n', 'W<left>', '<cmd>BufferLineCloseLeft<CR>', opt)
 map('n', '<leader>w', '<cmd>bw<CR>', opt)
 
 -- 复制到系统剪贴板
-map('v', '<leader>y', '"+y', opt)
+map('v', '<leader>y', ':OSCYank<CR>', opt)
 
 -- 保存
 map('n', '<c-s>', '<cmd>w<CR>', opt)
