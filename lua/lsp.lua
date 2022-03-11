@@ -51,3 +51,5 @@ require "lspconfig".denols.setup {
   ),
 }
 
+require "lspconfig".gopls.setup {}
+
