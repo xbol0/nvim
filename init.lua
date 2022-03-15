@@ -70,5 +70,7 @@ require "paq" {
 require "plugins"
 require "lsp"
 
+vim.g.everforest_background="soft"
+
 -- 设置主题
 vim.cmd("colorscheme everforest")
