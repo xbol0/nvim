@@ -25,7 +25,9 @@ map('n', '<c-l>', '<cmd>BufferLineCycleNext<CR>', opt)
 -- 删除标签栏
 map('n', 'W<right>', '<cmd>BufferLineCloseRight<CR>', opt)
 map('n', 'W<left>', '<cmd>BufferLineCloseLeft<CR>', opt)
-map('n', '<leader>w', '<cmd>bw<CR>', opt)
+
+-- 强制保存并退出
+map('n', '<leader>w', '<cmd>wq!<CR>', opt)
 
 -- 复制到系统剪贴板
 map('v', '<leader>y', ':OSCYank<CR>', opt)
