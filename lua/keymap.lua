@@ -37,7 +37,7 @@ map('n', '<c-s>', '<cmd>w<CR>', opt)
 map('n', '<leader>s', '<cmd>w<CR>', opt)
 
 -- 强制退出
-map('n', '<leader>q', '<cmd>q!<CR>', opt)
+map('n', '<leader>q', '<cmd>qall!<CR>', opt)
 
 -- 打开终端
 map('n', '<c-k><c-j>', '<cmd>lua require"FTerm".toggle()<CR>', opt)
